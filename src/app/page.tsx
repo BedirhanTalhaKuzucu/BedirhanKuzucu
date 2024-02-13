@@ -1,333 +1,140 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import { useState } from "react";
+import InfoButton from "@/components/infoButton";
+import InfoCard from "@/components/infoCard";
+import InteractiveCard from "@/components/interactiveCard";
 
 export default function Home() {
-  return (
-    <div className="grid grid-cols-2 h-full w-full ml-4 items-start justify-between sm:flex-row">
-      <div className="grid grid-rows-2 self-center place-items-center ps-4">
-        <h1
-          className="inline-block text-[#754671] dark:text-light
-      text-8xl font-bold w-full capitalize  !text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl xl:text-6xl"
-          style={{ opacity: "1" }}
-        >
-          <span
-            className="inline-block"
-            style={{ opacity: "1", transform: "none" }}
-          >
-            I&nbsp;
-          </span>
-          <span
-            className="inline-block"
-            style={{ opacity: "1", transform: "none" }}
-          >
-            make&nbsp;
-          </span>
-          <span
-            className="inline-block"
-            style={{ opacity: "1", transform: "none" }}
-          >
-            your&nbsp;
-          </span>
-          {/* dreams come true with codes */}
-          <span
-            className="inline-block"
-            style={{ opacity: "1", transform: "none" }}
-          >
-            Dreams&nbsp;
-          </span>
-          <span
-            className="inline-block"
-            style={{ opacity: "1", transform: "none" }}
-          >
-            come&nbsp;
-          </span>
-          <span
-            className="inline-block"
-            style={{ opacity: "1", transform: "none" }}
-          >
-            with&nbsp;
-          </span>
-          <span
-            className="inline-block"
-            style={{ opacity: "1", transform: "none" }}
-          >
-            codes&nbsp;
-          </span>
-        </h1>
-        <p className="my-4 text-base font-medium">
-          It is very important for me to prioritize user experience in every
-          line. I invite you to my creative world, let's build your project
-          together
-        </p>
-        {/* <p className=" text-base font-medium text-purple-950 dark:text-gray-500">
-            I make your dreams come true with codes
-          </p> */}
-      </div>
-      <div className="h-full grid place-items-center">
-        <Image
-          src="/assets/softwareDeveloper.png"
-          alt="talha"
-          width={580}
-          height={580}
-          loading="lazy"
-          className="rounded-lg  h-auto w-3/4"
-        />
-      </div>
-    </div>
-  );
+  const [open, setopen] = useState("");
 
-  <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
-    <div className="grid grid-cols-3 gap-4 mb-4">
-      <div className="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-        <p className="text-2xl text-gray-400 dark:text-gray-500">
-          <svg
-            className="w-3.5 h-3.5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 18 18"
+  return (
+    <>
+      <div className="grid grid-cols-2 h-full ml-4 items-start justify-between sm:flex-row">
+        <div className=" h-100 grid grid-rows-2 self-center place-items-center ps-4">
+          <h1
+            className="inline-block text-[#754671] dark:text-light
+      text-8xl font-bold w-full capitalize  !text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl xl:text-6xl"
+            style={{ opacity: "1" }}
           >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M9 1v16M1 9h16"
-            />
-          </svg>
-        </p>
-      </div>
-      <div className="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-        <p className="text-2xl text-gray-400 dark:text-gray-500">
-          <svg
-            className="w-3.5 h-3.5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 18 18"
+            <span
+              className="inline-block"
+              style={{ opacity: "1", transform: "none" }}
+            >
+              I&nbsp;
+            </span>
+            <span
+              className="inline-block"
+              style={{ opacity: "1", transform: "none" }}
+            >
+              make&nbsp;
+            </span>
+            <span
+              className="inline-block"
+              style={{ opacity: "1", transform: "none" }}
+            >
+              your&nbsp;
+            </span>
+            <span
+              className="inline-block"
+              style={{ opacity: "1", transform: "none" }}
+            >
+              Dreams&nbsp;
+            </span>
+            <span
+              className="inline-block"
+              style={{ opacity: "1", transform: "none" }}
+            >
+              come&nbsp;
+            </span>
+            <span
+              className="inline-block"
+              style={{ opacity: "1", transform: "none" }}
+            >
+              with&nbsp;
+            </span>
+            <span
+              className="inline-block"
+              style={{ opacity: "1", transform: "none" }}
+            >
+              codes&nbsp;
+            </span>
+          </h1>
+          <p className="my-4 text-base font-medium">
+            It is very important for me to prioritize user experience in every
+            line. I invite you to my creative world, let's build your project
+            together
+          </p>
+          <button
+            type="button"
+            className="text-white bg-[#754671] hover:bg-purple-800  focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
           >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M9 1v16M1 9h16"
-            />
-          </svg>
-        </p>
-      </div>
-      <div className="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
-        <p className="text-2xl text-gray-400 dark:text-gray-500">
-          <svg
-            className="w-3.5 h-3.5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 18 18"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M9 1v16M1 9h16"
-            />
-          </svg>
-        </p>
-      </div>
-    </div>
-    <div className="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-      <p className="text-2xl text-gray-400 dark:text-gray-500">
-        <svg
-          className="w-3.5 h-3.5"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 18 18"
-        >
-          <path
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M9 1v16M1 9h16"
+            Contact Me
+          </button>
+        </div>
+        <div className="h-100 h-full grid place-items-center">
+          <Image
+            src="/assets/softwareDeveloper.png"
+            alt="talha"
+            width={580}
+            height={580}
+            loading="lazy"
+            className="rounded-lg  h-auto w-3/4"
           />
-        </svg>
-      </p>
-    </div>
-    <div className="grid grid-cols-2 gap-4 mb-4">
-      <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-        <p className="text-2xl text-gray-400 dark:text-gray-500">
-          <svg
-            className="w-3.5 h-3.5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 18 18"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M9 1v16M1 9h16"
-            />
-          </svg>
-        </p>
+        </div>
       </div>
-      <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-        <p className="text-2xl text-gray-400 dark:text-gray-500">
-          <svg
-            className="w-3.5 h-3.5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 18 18"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M9 1v16M1 9h16"
+
+      <div className="grid grid-cols-3 h-full ml-4 items-start justify-between sm:flex-row">
+        <div className="grid mt-12 self-center place-items-center ps-4">
+          <div className="grid grid-cols-1  gap-y-[3.5rem]">
+            <h1 className="text-[1.5rem] text-[#754671] font-bold subpixel-antialiased">
+              WHY SHOULD YOU CONTACT ME?
+            </h1>
+
+            <InfoButton
+              title="Member of Team"
+              text="Are you looking for a good team member for your development
+                  team in a challenging project?"
+              onClick={() => setopen("teamMember")}
+              icon="team"
             />
-          </svg>
-        </p>
-      </div>
-      <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-        <p className="text-2xl text-gray-400 dark:text-gray-500">
-          <svg
-            className="w-3.5 h-3.5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 18 18"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M9 1v16M1 9h16"
+            <InfoButton
+              title="I am Freelancer"
+              text="Do you want to turn your dream project into reality?"
+              onClick={() => setopen("freeLancer")}
+              icon="project"
             />
-          </svg>
-        </p>
-      </div>
-      <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-        <p className="text-2xl text-gray-400 dark:text-gray-500">
-          <svg
-            className="w-3.5 h-3.5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 18 18"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M9 1v16M1 9h16"
+            <InfoButton
+              title="I am member of the open-source community"
+              text="I would gladly contribute to the challenges in the
+                  technologies I am interested in"
+              onClick={() => setopen("openSource")}
+              icon="code"
             />
-          </svg>
-        </p>
-      </div>
-    </div>
-    <div className="flex items-center justify-center h-48 mb-4 rounded bg-gray-50 dark:bg-gray-800">
-      <p className="text-2xl text-gray-400 dark:text-gray-500">
-        <svg
-          className="w-3.5 h-3.5"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 18 18"
-        >
-          <path
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M9 1v16M1 9h16"
-          />
-        </svg>
-      </p>
-    </div>
-    <div className="grid grid-cols-2 gap-4">
-      <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-        <p className="text-2xl text-gray-400 dark:text-gray-500">
-          <svg
-            className="w-3.5 h-3.5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 18 18"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M9 1v16M1 9h16"
+          </div>
+        </div>
+        {open === "" ? (
+          <div className="h-100 col-span-2 h-full grid place-self-end place-items-center">
+            <Image
+              src="/assets/pngwing.com.png"
+              alt="talha"
+              width={500}
+              height={500}
+              loading="lazy"
+              className=" w-1/2 place-self-center"
             />
-          </svg>
-        </p>
-      </div>
-      <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-        <p className="text-2xl text-gray-400 dark:text-gray-500">
-          <svg
-            className="w-3.5 h-3.5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 18 18"
+          </div>
+        ) : (
+          <motion.div
+            className="col-span-2 self-center place-self-end mt-[1rem] mx-[4rem]"
+            animate={{ x: 30 }}
+            transition={{ ease: "easeOut", duration: 2 }}
           >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M9 1v16M1 9h16"
-            />
-          </svg>
-        </p>
+            <InteractiveCard reason={open} />
+          </motion.div>
+        )}
       </div>
-      <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-        <p className="text-2xl text-gray-400 dark:text-gray-500">
-          <svg
-            className="w-3.5 h-3.5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 18 18"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M9 1v16M1 9h16"
-            />
-          </svg>
-        </p>
-      </div>
-      <div className="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
-        <p className="text-2xl text-gray-400 dark:text-gray-500">
-          <svg
-            className="w-3.5 h-3.5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 18 18"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M9 1v16M1 9h16"
-            />
-          </svg>
-        </p>
-      </div>
-    </div>
-  </div>;
+    </>
+  );
 }

@@ -161,7 +161,7 @@ export default function RootLayout({
             </div>
           </aside>
         </div>
-        <div className="p-4 h-screen sm:ml-80">{children}</div>
+        <div className="p-5 h-screen sm:ml-80">{children}</div>
       </body>
     </html>
   );
