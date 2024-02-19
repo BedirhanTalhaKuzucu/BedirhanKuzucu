@@ -63,7 +63,7 @@ export default function Home() {
           </h1>
           <p className="my-4 text-base font-medium">
             It is very important for me to prioritize user experience in every
-            line. I invite you to my creative world, let's build your project
+            line. I invite you to my creative world, let is build your project
             together
           </p>
           <button
