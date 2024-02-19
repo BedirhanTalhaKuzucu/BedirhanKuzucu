@@ -34,6 +34,7 @@ function ServicesPage() {
         </div>
       </div>
       <div className="h-full grid place-items-center">
+        try
         <Image
           src="/assets/olacak.png"
           alt="talha"
