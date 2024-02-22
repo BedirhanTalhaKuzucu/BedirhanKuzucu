@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import InfoCard from "@/components/infoCard";
+import InfoCard from "@/app/ui/infoCard";
 
 function ServicesPage() {
   return (
