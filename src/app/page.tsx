@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ReasonforContact from "./ui/home/reasonforContact";
+import ReasonforContact from "../components/ui/home/reasonforContact";
 
 export default function Home() {
   return (

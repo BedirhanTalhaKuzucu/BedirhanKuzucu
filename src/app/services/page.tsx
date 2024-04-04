@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import InfoCard from "@/app/ui/infoCard";
+import InfoCard from "@/components/ui/infoCard";
 
 function ServicesPage() {
   return (
@@ -35,7 +35,6 @@ function ServicesPage() {
         </div>
       </div>
       <div className="h-full grid place-items-center">
-        try
         <Image
           src="/assets/olacak.png"
           alt="talha"

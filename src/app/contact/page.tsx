@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import InfoCard from "@/app/ui/infoCard";
+import InfoCard from "@/components/ui/infoCard";
 
 function ContactPage() {
   return (

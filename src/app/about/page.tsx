@@ -2,7 +2,7 @@ import React from "react";
 import {
   VerticalStepperContainer,
   VerticalStepperItem,
-} from "../ui/verticalStepper";
+} from "../../components/ui/verticalStepper";
 
 function About() {
   return (
