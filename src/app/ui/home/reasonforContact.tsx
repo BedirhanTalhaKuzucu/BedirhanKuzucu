@@ -1,44 +1,50 @@
 "use client";
 import React, { useState } from "react";
-import InfoButton from "../infoButton";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import InteractiveCard from "../interactiveCard";
+import InteractiveCard from "../interactiveCard/interactiveCard";
+import InfoCard from "../infoCard";
 
 const ReasonforContact = () => {
-  const [open, setopen] = useState("");
+  const [cardType, setCardType] = useState("");
 
   return (
     <React.Fragment>
-      <div className="grid mt-12 self-center place-items-center ps-4">
+      <div className="grid mt-12 mb-12 self-center place-items-center ps-4">
         <div className="grid grid-cols-1  gap-y-[3.5rem]">
-          <h1 className="text-[1.5rem] text-[#754671] font-bold subpixel-antialiased">
-            WHY SHOULD YOU CONTACT ME?
-          </h1>
-
-          <InfoButton
-            title="Member of Team"
-            text="Are you looking for a good team member for your development
-                  team in a challenging project?"
-            onClick={() => setopen("teamMember")}
-            icon="team"
+          <InfoCard
+            description="I can build a beautiful and scalable SPA using modern Framework"
+            titel="Frontend Development"
+            icon="screen"
+            onEnter={() => setCardType("frontend")}
+            onMouseLeave={() => setCardType("")}
           />
-          <InfoButton
-            title="I am Freelancer"
-            text="Do you want to turn your dream project into reality?"
-            onClick={() => setopen("freeLancer")}
-            icon="project"
+          <InfoCard
+            titel="Backend Development"
+            description="handle database, server, api using Express, Django & other popular frameworks"
+            onEnter={() => setCardType("backend")}
+            onMouseLeave={() => setCardType("")}
+            icon="database"
           />
-          <InfoButton
-            title="I am member of the open-source community"
-            text="I would gladly contribute to the challenges in the
+          <InfoCard
+            titel="OpenSource Contributer"
+            description="I would gladly contribute to the challenges in the
                   technologies I am interested in"
-            onClick={() => setopen("openSource")}
-            icon="code"
+            icon="grafic"
+            onEnter={() => setCardType("teamMember")}
+            onMouseLeave={() => setCardType("")}
           />
+          {/* <InfoCard
+            titel="I am learning"
+            description="I would gladly contribute to the challenges in the
+                  technologies I am interested in"
+            onEnter={() => setCardType("openSource")}
+            onMouseLeave={() => setCardType("")}
+            icon="code"
+          /> */}
         </div>
       </div>
-      {open === "" ? (
+      {cardType === "" ? (
         <div className="h-100 col-span-2 h-full grid place-self-end place-items-center">
           <Image
             src="/assets/pngwing.com.png"
@@ -55,7 +61,7 @@ const ReasonforContact = () => {
           animate={{ x: 30 }}
           transition={{ ease: "easeOut", duration: 2 }}
         >
-          <InteractiveCard reason={open} />
+          <InteractiveCard type={cardType} />
         </motion.div>
       )}
     </React.Fragment>

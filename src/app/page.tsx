@@ -7,57 +7,25 @@ export default function Home() {
       <div className="grid grid-cols-2 h-full ml-4 items-start justify-between sm:flex-row">
         <div className=" h-100 grid grid-rows-2 self-center place-items-center ps-4">
           <h1
-            className="inline-block text-[#754671] dark:text-light
-      text-8xl font-bold w-full capitalize  !text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl xl:text-6xl"
+            className="inline-block text-[#754671] dark:text-light text-8xl font-bold w-full capitalize  !text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl xl:text-6xl"
             style={{ opacity: "1" }}
           >
             <span
               className="inline-block"
               style={{ opacity: "1", transform: "none" }}
             >
-              I&nbsp;
-            </span>
-            <span
-              className="inline-block"
-              style={{ opacity: "1", transform: "none" }}
-            >
-              make&nbsp;
-            </span>
-            <span
-              className="inline-block"
-              style={{ opacity: "1", transform: "none" }}
-            >
-              your&nbsp;
-            </span>
-            <span
-              className="inline-block"
-              style={{ opacity: "1", transform: "none" }}
-            >
-              Dreams&nbsp;
-            </span>
-            <span
-              className="inline-block"
-              style={{ opacity: "1", transform: "none" }}
-            >
-              come&nbsp;
-            </span>
-            <span
-              className="inline-block"
-              style={{ opacity: "1", transform: "none" }}
-            >
-              with&nbsp;
-            </span>
-            <span
-              className="inline-block"
-              style={{ opacity: "1", transform: "none" }}
-            >
-              codes&nbsp;
+              Hello and welcome! &nbsp;
             </span>
           </h1>
           <p className="my-4 text-base font-medium">
-            It is very important for me to prioritize user experience in every
-            line. I invite you to my creative world, let is build your project
-            together
+            My name is Bedirhan and I am a software developer. This is my
+            digital space where I showcase the projects I prepared with code.
+            Here you will find projects developed using various technology
+            stacks. I created this platform to both explore my personal
+            interests and share my professional experiences. Every project is
+            part of my learning journey and every feedback helps me take a step
+            forward. If you are interested, feel free to discover more about my
+            projects and get in touch. Let is undertake new projects together!
           </p>
           <button
             type="button"
@@ -78,8 +46,14 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 h-full ml-4 items-start justify-between sm:flex-row">
-        <ReasonforContact />
+      <hr className="mt-12 my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
+      <div className="h-full">
+        <h1 className="text-[1.5rem] text-[#754671] font-bold subpixel-antialiased text-center self-center">
+          WHAT I AM DOING
+        </h1>
+        <div className="grid grid-cols-3   ml-4 mb-10 items-start justify-between sm:flex-row">
+          <ReasonforContact />
+        </div>
       </div>
     </>
   );
