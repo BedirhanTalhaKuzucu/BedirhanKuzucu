@@ -79,17 +79,21 @@ function ServicesPage() {
                   />
                 </CardItem>
                 <hr className="mt-6 my-6 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
-                {repo.techStack &&
-                  repo.techStack.map((item, idx) => (
-                    <CardItem
-                      key={idx}
-                      as="span"
-                      translateZ="60"
-                      className="bg-indigo-100 text-indigo-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300"
-                    >
-                      {item}
-                    </CardItem>
-                  ))}
+                {repo.techStack && (
+                  <div className="text-center">
+                    {repo.techStack.map((item, idx) => (
+                      <CardItem
+                        key={idx}
+                        as="span"
+                        translateZ="60"
+                        className="bg-indigo-100 text-indigo-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300"
+                      >
+                        {item}
+                      </CardItem>
+                    ))}
+                  </div>
+                )}
+
                 <div className="flex justify-between items-center mt-8">
                   <CardItem
                     translateZ={20}
@@ -102,7 +106,9 @@ function ServicesPage() {
                   </CardItem>
                   <CardItem
                     translateZ={20}
-                    as="button"
+                    as={Link}
+                    target="__blank"
+                    href={repo.url}
                     className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
                   >
                     GitHub
