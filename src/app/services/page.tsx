@@ -4,7 +4,6 @@ import Image from "next/image";
 import InfoCard from "@/components/ui/infoCard";
 import { motion } from "framer-motion";
 import { SimpleGrid, Container } from "@chakra-ui/react";
-import RepositoryCard from "./ProjectsCard";
 import { repositoriesList } from "@/lib/constant";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import Link from "next/link";
@@ -52,63 +51,67 @@ function ServicesPage() {
     //   </div>
     // </div>
     <Container maxW="7xl" p="5">
-      <SimpleGrid columns={[1, 2, 3]} spacing={50} mt={20}>
-        {/* {repositoriesList().map((repo, index) => (
-          <motion.div whileHover={{ y: -5 }} key={index}>
-            <RepositoryCard
-              title={repo.title}
-              description={repo.description}
-              cover={repo.cover}
-              techStack={repo.techStack}
-              url={repo.url}
-              stargazers_count={repo.stargazers_count}
-            />
-          </motion.div>
-        ))} */}
-        <CardContainer className="inter-var">
-          <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
-            <CardItem
-              translateZ="50"
-              className="text-xl font-bold text-neutral-600 dark:text-white"
-            >
-              Make things float in air
-            </CardItem>
-            <CardItem
-              as="p"
-              translateZ="60"
-              className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
-            >
-              Hover over this card to unleash the power of CSS perspective
-            </CardItem>
-            <CardItem translateZ="100" className="w-full mt-4">
-              <Image
-                src="/public/assets/bedirhan.jpg"
-                height="1000"
-                width="1000"
-                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                alt="thumbnail"
-              />
-            </CardItem>
-            <div className="flex justify-between items-center mt-20">
-              <CardItem
-                translateZ={20}
-                as={Link}
-                href="https://twitter.com/mannupaaji"
-                target="__blank"
-                className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-              >
-                Try now →
-              </CardItem>
-              <CardItem
-                translateZ={20}
-                as="button"
-                className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-              >
-                Sign up
-              </CardItem>
-            </div>
-          </CardBody>
-        </CardContainer>
+      <SimpleGrid columns={[1, null, 2]} spacing={50} mt={20}>
+        {repositoriesList().map((repo, index) => (
+          <>
+            <CardContainer className="inter-var">
+              <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
+                <CardItem
+                  translateZ="50"
+                  className="text-xl font-bold text-neutral-600 dark:text-white"
+                >
+                  {repo.title}
+                </CardItem>
+                <CardItem
+                  as="p"
+                  translateZ="60"
+                  className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                >
+                  {repo.description}
+                </CardItem>
+                <CardItem translateZ="100" className="w-full mt-4">
+                  <Image
+                    src={repo.cover}
+                    height="1000"
+                    width="1000"
+                    className="h-60 w-full object-cover  rounded-xl group-hover/card:shadow-xl"
+                    alt="thumbnail"
+                  />
+                </CardItem>
+                <hr className="mt-6 my-6 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
+                {repo.techStack &&
+                  repo.techStack.map((item, idx) => (
+                    <CardItem
+                      key={idx}
+                      as="span"
+                      translateZ="60"
+                      className="bg-indigo-100 text-indigo-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300"
+                    >
+                      {item}
+                    </CardItem>
+                  ))}
+                <div className="flex justify-between items-center mt-8">
+                  <CardItem
+                    translateZ={20}
+                    as={Link}
+                    href={repo.live}
+                    target="__blank"
+                    className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                  >
+                    Live →
+                  </CardItem>
+                  <CardItem
+                    translateZ={20}
+                    as="button"
+                    className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
+                  >
+                    GitHub
+                  </CardItem>
+                </div>
+              </CardBody>
+            </CardContainer>
+          </>
+        ))}
       </SimpleGrid>
     </Container>
   );
