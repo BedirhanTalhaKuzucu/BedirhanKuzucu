@@ -35,6 +35,26 @@ export const LINKS: LinksItem[] = [
   // },
 ];
 
+export const workProjects = [
+  {
+    title: "Änderungsmanagement App",
+    description:
+      "Digitale Lösung Projekt für effizientes Änderungsmanagement im Technikbereich",
+    cover: "/assets/projects/Volkswagen_logo_2019.svg",
+    techStack: ["React", "Redux", "GroupUI", "Formik", "Yup"],
+    url: "https://github.com/BedirhanTalhaKuzucu/fireblog-with-redux",
+    live: "https://firebaseblog-app.netlify.app/",
+  },
+  {
+    title: "Datenintegration  App",
+    description: "Datenintegration Projekt im Automobilsektor",
+    cover: "/assets/projects/Volkswagen_logo_2019.svg",
+    techStack: ["Angular", "Karma", "Jasmine", "Soap", "RestAPI"],
+    url: "https://github.com/BedirhanTalhaKuzucu/fireblog-with-redux",
+    live: "https://firebaseblog-app.netlify.app/",
+  },
+];
+
 export function repositoriesList() {
   return [
     {
