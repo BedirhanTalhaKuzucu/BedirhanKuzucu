@@ -1,7 +1,7 @@
 import React, { FormEvent, FunctionComponent, useState } from "react";
-import { addEmail } from "@/app/lib/actions";
 import clsx from "clsx";
 import { useFormState } from "react-dom";
+import { addEmail } from "@/lib/actions";
 
 const SaveEmail: FunctionComponent = () => {
   const initialState = { message: "", type: "" };
