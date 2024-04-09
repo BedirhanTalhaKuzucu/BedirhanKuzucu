@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ReasonforContact from "../components/ui/home/reasonforContact";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -27,12 +28,12 @@ export default function Home() {
             forward. If you are interested, feel free to discover more about my
             projects and get in touch. Let is undertake new projects together!
           </p>
-          <button
-            type="button"
+          <Link
+            href="/contact"
             className="text-white bg-[#754671] hover:bg-purple-800  focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900"
           >
-            Contact Me
-          </button>
+            Contact Me!
+          </Link>
         </div>
         <div className="h-100 h-full grid place-items-center">
           <Image

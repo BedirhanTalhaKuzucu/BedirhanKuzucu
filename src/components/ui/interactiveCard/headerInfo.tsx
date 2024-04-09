@@ -3,6 +3,17 @@ import React, { useMemo } from "react";
 function HeaderInfo({ type }: { type: string }) {
   const inhalt = useMemo(() => {
     switch (type) {
+      case "frontend":
+        return {
+          title:
+            "Crafting Seamless User Experiences through Frontend Development",
+          text: "I specialize in frontend development, where I bring designs to life by crafting interactive and user-friendly interfaces. My expertise lies in creating seamless user experiences through the implementation of modern web technologies and best practices",
+        };
+      case "backend":
+        return {
+          title: "Exploring Backend Development: My Journey So Far",
+          text: "I'm proficient in backend development, where I work on server-side logic and database management to support web applications.",
+        };
       case "teamMember":
         return {
           title: "Unfortunately, I'm currently part of a team full time.",
@@ -16,7 +27,7 @@ function HeaderInfo({ type }: { type: string }) {
       case "openSource":
         return {
           title: "OpenSource Contibuter",
-          text: "I am an openSource supporter. So far, I have received support from different developers. I believe there should be as much output as there is input. If there is anything I can help with, please do not hesitate to contact me.",
+          text: "I am an avid Open Source contributor, dedicating my time and effort to contributing to open-source projects. I'm passionate about making a positive impact within the community and supporting the growth of projects.",
         };
       default:
         break;
