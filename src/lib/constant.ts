@@ -140,3 +140,74 @@ export function repositoriesList() {
     },
   ];
 }
+
+export const frontendContens = [
+  {
+    title: "React",
+    content:
+      " My go-to library for building dynamic user interfaces. Its component-based architecture and virtual DOM make development smooth and efficient.",
+  },
+  {
+    title: "Next.js",
+    content:
+      "My favorite frontend framework. It stands out with its speed, flexibility, and SEO-friendliness. Its ability to easily adapt to needs like SSR and CSR is a huge plus for me.",
+  },
+  {
+    title: "Angular",
+    content:
+      "A robust frontend framework that I rely on for complex web applications. Its comprehensive features, such as dependency injection and TypeScript support, empower me to build scalable projects.",
+  },
+  {
+    title: "TypeScript",
+    content:
+      "My preferred language for frontend development. Its static typing helps catch errors early and enhances code maintainability, providing a solid foundation for building reliable applications.",
+  },
+  {
+    title: "Tailwind CSS",
+    content:
+      "My go-to utility-first CSS framework. Its utility classes enable rapid prototyping and consistent styling, allowing me to create modern and responsive designs with ease.",
+  },
+  {
+    title: "Bootstrap",
+    content:
+      "A versatile CSS framework that I often use for rapid prototyping and building responsive layouts. Its extensive component library and grid system expedite frontend development without sacrificing aesthetics.",
+  },
+  {
+    title: "SASS",
+    content:
+      "My preferred CSS preprocessor for enhancing stylesheet maintainability and organization. Its features like variables, mixins, and nesting streamline CSS authoring and improve code readability.",
+  },
+];
+
+export const backendContents = [
+  {
+    title: "Expres.Js",
+    content:
+      "My preferred backend framework for building fast and minimalist web applications. Its simplicity and robust middleware support make API development a breeze.",
+  },
+  {
+    title: "Django",
+    content:
+      "A high-level Python web framework that I rely on for building scalable and secure web applications. Its batteries-included philosophy and built-in admin interface accelerate development without compromising on security.",
+  },
+  {
+    title: "Node.js",
+    content:
+      "A versatile JavaScript runtime environment that I frequently use for building scalable network applications. Its non-blocking I/O and event-driven architecture enable high-performance and real-time applications.",
+  },
+  {
+    title: "Python",
+    content:
+      "My go-to programming language for backend development. Its simplicity, readability, and extensive libraries make it ideal for building a wide range of applications, from web development to data analysis.",
+  },
+  {
+    title: "Swagger",
+    content:
+      "My preferred tool for designing, building, and documenting APIs. Its user-friendly interface and robust features streamline the API development process and ensure consistency and reliability.",
+  },
+  {
+    title: "Postman",
+    content:
+      "My favorite API client that I use for testing, debugging, and monitoring APIs.Its intuitive interface, automation capabilities, and extensive features simplify API testing and collaboration.",
+  },
+];
